@@ -114,12 +114,9 @@ export default function MainContent() {
     ]
     return (
         <div className='pt-10 pb-40 px-20 bg-gray-950 w-[70%] h-screen overflow-scroll'>
-            <div className="py-2 flex justify-between items-center w-full">
-                <div>
-                    arrows
-                </div>
+            <div className="py-2 flex justify-center items-center w-full">
                 <div className="w-[60%]">
-                    <form className="">
+                    <form>
                         <div className="relative rounded-full overflow-hidden">
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                 <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -130,7 +127,6 @@ export default function MainContent() {
                         </div>
                     </form>
                 </div>
-                <div>...</div>
             </div>
             {
                 playlist.map((playlist: any, index: number) => {

@@ -107,9 +107,6 @@ export default function Overview() {
     ]
     return (
         <div className='bg-black flex flex-col gap-3 py-10 px-10 h-screen w-[20%] overflow-scroll pb-40'>
-            <div>
-                profile
-            </div>
             {
                 playlist.map((playlist, index)=>{
                     return (
