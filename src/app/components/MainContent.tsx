@@ -1,6 +1,6 @@
 function Card({ data }: any) {
     return (
-        <div className='overflow-hidden rounded hover:bg-gray-900 px-1 py-5 flex flex-col justify-between gap-2'>
+        <div className='rounded hover:bg-gray-900 min-w-32 px-1 py-5 flex flex-col justify-between gap-2'>
             <div className="oveflow-hidden rounded h-[70%]">
                 <img src={data.img} className="rounded" />
             </div>
@@ -113,7 +113,7 @@ export default function MainContent() {
 
     ]
     return (
-        <div className='pt-10 pb-40 px-20 bg-gray-950 w-[70%] h-screen overflow-scroll'>
+        <div className='pt-10 pb-40 px-20 bg-gray-950 w-full lg:w-[70%] h-screen overflow-scroll'>
             <div className="py-2 flex justify-center items-center w-full">
                 <div className="w-[60%]">
                     <form>
@@ -128,20 +128,22 @@ export default function MainContent() {
                     </form>
                 </div>
             </div>
-            {
+           <div className="flex gap-2 flex-col">
+           {
                 playlist.map((playlist: any, index: number) => {
                     return (
                         <div key={index}>
                             <div className="font-bold text-2xl">
                                 {playlist.title}
                             </div>
-                            <div>
+                            <div className="overflow-x-scroll">
                                 <PlayList list={playlist.list} />
                             </div>
                         </div>
                     )
                 })
             }
+           </div>
 
         </div>
     )

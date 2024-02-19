@@ -36,7 +36,7 @@ function PlayList({ data }: { data: any }) {
         </div>
     )
 }
-export default function Overview() {
+export default function Sidebar() {
     const playlist = [
         {
             'title':'Recently Played',
@@ -106,7 +106,7 @@ export default function Overview() {
         }
     ]
     return (
-        <div className='bg-black flex flex-col gap-3 py-10 px-10 h-screen w-[20%] overflow-scroll pb-40'>
+        <div className='bg-black flex flex-col gap-3 py-10 px-10 h-screen w-full lg:w-[20%] overflow-scroll pb-40'>
             {
                 playlist.map((playlist, index)=>{
                     return (

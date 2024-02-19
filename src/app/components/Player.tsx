@@ -31,8 +31,8 @@ export default function Player() {
         )
     }
     return (
-        <div className='flex justify-between py-10 px-10 bg-black w-screen fixed bottom-0 items-center'>
-            <div className="flex justify-center items-center gap-8">
+        <div className='flex justify-center md:justify-between py-10 px-10 bg-black w-screen fixed bottom-0 items-center'>
+            <div className="hidden md:flex justify-center items-center gap-8">
                 <div className="flex flex-col">
                     <div>Date</div>
                     <div className="text-[#7d7f86]">song</div>
@@ -54,7 +54,7 @@ export default function Player() {
                     <PlayerBar />
                 </div>
             </div>
-            <div className="flex w-[15%] gap-3 items-center justify-center">
+            <div className="w-[15%] gap-3 items-center justify-center hidden md:flex">
                 {renderOptions(SpeakerIcon,handleClick)}
                 <PlayerBar />
                 {renderOptions(MicrophoneIcon,handleClick)}

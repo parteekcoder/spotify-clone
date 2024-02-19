@@ -27,8 +27,8 @@ export default function Navbar() {
     }
 
     return (
-        <div className={`py-10 px-10 bg-black h-screen`}>
-            <div className={`flex justify-between gap-2 items-center ${!open ? 'flex-col' : ''}`}>
+        <div className={`py-10 px-10 bg-black h-12 ${open?'h-screen':''} lg:h-screen`}>
+            <div className={`flex justify-between gap-2 items-center ${!open ? 'lg:flex-col' : ''} `}>
                 <div>
                     <img className="w-10 h-10" src="https://nitj.ac.in/public/assets/images/logo_250.png" />
                 </div>
