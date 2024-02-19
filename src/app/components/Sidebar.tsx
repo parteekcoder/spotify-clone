@@ -1,21 +1,29 @@
+"use client";
+import { motion } from "framer-motion";
+
 function Card({ data }: any) {
     return (
-        <div className='overflow-hidden rounded hover:bg-gray-900 px-2 py-2 flex justify-between gap-4 w-full'>
-            <div className="oveflow-hidden rounded flex gap-3">
-                <img src={data.img} className="rounded w-12 h-12" />
-                <div className="flex flex-col">
-                    <div className="text text-base">
-                        {data.title}
-                    </div>
-                    <div className="text-[#7d7f86] text-sm">
-                        {data.desc}
+        <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+        >
+            <div className='overflow-hidden rounded hover:bg-gray-900 px-2 py-2 flex justify-between gap-4 w-full'>
+                <div className="oveflow-hidden rounded flex gap-3">
+                    <img src={data.img} className="rounded w-12 h-12" />
+                    <div className="flex flex-col">
+                        <div className="text text-base">
+                            {data.title}
+                        </div>
+                        <div className="text-[#7d7f86] text-sm">
+                            {data.desc}
+                        </div>
                     </div>
                 </div>
+                <div className="text-[#7d7f86] flex justify-center items-center text-xs">
+                    {data.time}
+                </div>
             </div>
-            <div className="text-[#7d7f86] flex justify-center items-center text-xs">
-                {data.time}
-            </div>
-        </div>
+        </motion.div>
     )
 }
 
@@ -39,8 +47,8 @@ function PlayList({ data }: { data: any }) {
 export default function Sidebar() {
     const playlist = [
         {
-            'title':'Recently Played',
-            'list':[
+            'title': 'Recently Played',
+            'list': [
                 {
                     'img': 'https://nitj.ac.in/files/1707290111500-Welcome%20Snap.jpg',
                     'title': 'Savage',
@@ -72,8 +80,8 @@ export default function Sidebar() {
             ]
         },
         {
-            'title':'My Playlist',
-            'list':[
+            'title': 'My Playlist',
+            'list': [
                 {
                     'img': 'https://nitj.ac.in/files/1707290111500-Welcome%20Snap.jpg',
                     'title': 'Savage',
@@ -108,9 +116,9 @@ export default function Sidebar() {
     return (
         <div className='bg-black flex flex-col gap-3 py-10 px-10 h-screen w-full lg:w-[20%] overflow-scroll pb-40'>
             {
-                playlist.map((playlist, index)=>{
+                playlist.map((playlist, index) => {
                     return (
-                        <PlayList data={playlist} key={index}/>
+                        <PlayList data={playlist} key={index} />
                     )
                 })
             }
