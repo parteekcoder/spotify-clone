@@ -5,7 +5,7 @@ import Player from './components/Player'
 
 export default function Home() {
   return (
-    <div className='w-full'>
+    <div className='w-full h-screen'>
       <div className='flex justify-between w-full'>
         <Navbar/>
         <MainContent/>
