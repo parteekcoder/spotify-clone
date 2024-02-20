@@ -13,26 +13,28 @@ Playlist.Horizontal = ({ ...props }) => {
                 props.playlist.map((playlist: any, index: number) => {
                     return (
                         <div key={index}>
-                            <div className="font-bold text-2xl">
+                            <div className="font-bold text-xl">
                                 {playlist.title}
                             </div>
                             <div className="overflow-x-scroll overflow-y-hidden">
-                                <div className="flex justify-between w-full gap-5 px-2 items-center">
+                                <div className="flex gap-3 w-full px-2 items-center">
                                     {playlist.list.map((song: any, index: number) => {
                                         return (
                                             <motion.div
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
+                                                key={index}
+                                                className="w-60"
                                             >
-                                                <div className='rounded bg-gray-950 min-w-32 px-1 py-5 flex flex-col justify-between gap-2'>
+                                                <div className='rounded bg-gray-950 px-1 py-5 w-full gap-2 flex flex-col justify-between'>
                                                     <div className="oveflow-hidden rounded h-[70%]">
-                                                        <img src={song.img} className="rounded" />
+                                                        <img src={song.img} className="rounded object-cover" />
                                                     </div>
                                                     <div>
-                                                        <div className="h-[20%] font-semibold">
+                                                        <div className="h-[20%] text-sm font-semibold">
                                                             {song.title}
                                                         </div>
-                                                        <div className="text-[#7d7f86] h-[10%] text-sm">
+                                                        <div className="text-[#7d7f86] h-[10%] text-xs">
                                                             {song.desc}
                                                         </div>
                                                     </div>

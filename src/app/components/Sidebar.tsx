@@ -71,7 +71,7 @@ export default function Sidebar() {
         }
     ]
     return (
-        <div className='bg-black flex flex-col gap-3 py-10 px-10 h-screen w-full lg:w-[20%] overflow-scroll pb-40'>
+        <div className='bg-black flex flex-col gap-3 py-10 px-4 h-screen w-full lg:w-[20%] overflow-scroll pb-40'>
             <Playlist.Vertical playlist={playlist}/>
             <div className="flex justify-center items-center">
                 <button className="bg-gray-500 px-5 py-2 rounded w-full">
