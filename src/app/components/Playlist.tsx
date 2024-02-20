@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 
-export default function Playlist({ ...props }) {
+// eslint-disable-next-line react/display-name
+function Playlist({ ...props }) {
     return (
-        <></>
+        <div>
+            Playlist
+        </div>
     )
 }
 
+// eslint-disable-next-line react/display-name
 Playlist.Horizontal = ({ ...props }) => {
     return (
         <div className="flex gap-2 flex-col">
@@ -52,6 +56,7 @@ Playlist.Horizontal = ({ ...props }) => {
     )
 }
 
+// eslint-disable-next-line react/display-name
 Playlist.Vertical = ({ ...props }) => {
 
     return (
@@ -98,3 +103,6 @@ Playlist.Vertical = ({ ...props }) => {
         </div>
     )
 }
+
+Playlist.displayName = "Playlist"
+export default Playlist;
