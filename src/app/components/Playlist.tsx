@@ -14,11 +14,11 @@ Playlist.Horizontal = ({ ...props }) => {
             {
                 props.playlist.map((playlist: any, index: number) => {
                     return (
-                        <div key={index}>
+                        <div key={index} className="overflow-y-hidden">
                             <div className="font-bold text-xl">
                                 {playlist.title}
                             </div>
-                            <div className="overflow-x-scroll overflow-y-hidden">
+                            <div className="overflow-x-auto overflow-y-hidden">
                                 <div className="flex gap-3 w-full px-2 items-center">
                                     {playlist.list.map((song: any, index: number) => {
                                         return (

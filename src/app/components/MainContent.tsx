@@ -83,26 +83,11 @@ export default function MainContent() {
                 'title': 'Todays hot hit',
                 'desc': 'Listen to todays hot hits',
                 'link': '',
-            },
-            {
-                'img': 'https://nitj.ac.in/files/1707290111500-Welcome%20Snap.jpg',
-                'title': 'Todays hot hit',
-                'desc': 'Listen to todays hot hits',
-                'link': '',
-            },
-            {
-                'img': 'https://nitj.ac.in/files/1707290111500-Welcome%20Snap.jpg',
-                'title': 'Todays hot hit',
-                'desc': 'Listen to todays hot hits',
-                'link': '',
             }]
         },
-        
-
-
     ]
     return (
-        <div className='pt-10 pb-40 px-20 bg-gray-950 w-full lg:w-[70%] h-screen overflow-scroll scroll-smooth'>
+        <div className='pt-10 pb-40 px-20 bg-gray-950 w-full lg:w-[70%] h-screen overflow-auto scroll-smooth'>
             <div className="py-2 flex justify-center items-center w-full">
                 <div className="w-[60%]">
                     <form>
