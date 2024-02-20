@@ -1,38 +1,7 @@
 "use client";
-import { motion } from "framer-motion"
 
-function Card({ data }: any) {
-    return (
-        <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-        >
-            <div className='rounded bg-gray-950 min-w-32 px-1 py-5 flex flex-col justify-between gap-2'>
-                <div className="oveflow-hidden rounded h-[70%]">
-                    <img src={data.img} className="rounded" />
-                </div>
-                <div>
-                    <div className="h-[20%] font-semibold">
-                        {data.title}
-                    </div>
-                    <div className="text-[#7d7f86] h-[10%] text-sm">
-                        {data.desc}
-                    </div>
-                </div>
-            </div>
-        </motion.div>
-    )
-}
+import Playlist from "./Playlist";
 
-function PlayList({ list }: { list: any }) {
-    return (
-        <div className="flex justify-between w-full gap-5 items-center">
-            {list.map((list: any, index: number) => {
-                return <Card data={list} key={index} />
-            })}
-        </div>
-    )
-}
 
 export default function MainContent() {
     const playlist = [
@@ -115,8 +84,21 @@ export default function MainContent() {
                 'title': 'Todays hot hit',
                 'desc': 'Listen to todays hot hits',
                 'link': '',
+            },
+            {
+                'img': 'https://nitj.ac.in/files/1707290111500-Welcome%20Snap.jpg',
+                'title': 'Todays hot hit',
+                'desc': 'Listen to todays hot hits',
+                'link': '',
+            },
+            {
+                'img': 'https://nitj.ac.in/files/1707290111500-Welcome%20Snap.jpg',
+                'title': 'Todays hot hit',
+                'desc': 'Listen to todays hot hits',
+                'link': '',
             }]
         },
+        
 
 
     ]
@@ -136,23 +118,7 @@ export default function MainContent() {
                     </form>
                 </div>
             </div>
-            <div className="flex gap-2 flex-col">
-                {
-                    playlist.map((playlist: any, index: number) => {
-                        return (
-                            <div key={index}>
-                                <div className="font-bold text-2xl">
-                                    {playlist.title}
-                                </div>
-                                <div className="overflow-x-scroll">
-                                    <PlayList list={playlist.list} />
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-
+            <Playlist.Horizontal playlist={playlist}/>
         </div>
     )
 }
