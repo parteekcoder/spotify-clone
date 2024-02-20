@@ -87,7 +87,7 @@ export default function MainContent() {
         },
     ]
     return (
-        <div className='pt-10 pb-40 px-20 bg-gray-950 w-full lg:w-[70%] h-screen overflow-auto scroll-smooth'>
+        <div className='pt-10 pb-40 px-20 bg-gray-950 w-full lg:w-[70%] h-screen scrollbar-hide overflow-auto scroll-smooth'>
             <div className="py-2 flex justify-center items-center w-full">
                 <div className="w-[60%]">
                     <form>
